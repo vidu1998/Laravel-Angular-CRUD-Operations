@@ -1,0 +1,22 @@
+<form>
+  
+    <div class="mb-3">
+      <label for="articletitle" class="form-label">Artical Title</label>
+      <input type="text" class="form-control" [(ngModel)]="article.title" [ngModelOptions]="{standalone: true}" #articleTitle />
+    </div>
+    <div class="mb-3">
+      <label for="articlebody" class="form-label">Artical Body</label>
+      <textarea class="form-control" [(ngModel)]="article.body" [ngModelOptions]="{standalone: true}"  #articleBody></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="articleauthor" class="form-label">Article Author</label>
+      <input type="text" class="form-control" [(ngModel)]="article.author"  [ngModelOptions]="{standalone: true}"#articleAuthor />
+    </div>
+    <button type="button"  (click)="update(
+      articleTitle.value,articleBody.value,articleAuthor.value
+    )
+    
+    
+    " class="btn btn-primary">Update</button>
+  </form>
+  
